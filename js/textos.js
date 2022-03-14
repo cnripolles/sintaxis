@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded",iniciar,false);
+
+function iniciar() {
+    let b1=document.querySelector("#b1");
+    b1.addEventListener("click",darLaVuelta,false);
+}
+
+
 function darLaVuelta() {
     //let p1=document.getElementById("p1");
     let p1=document.querySelector("#p1");
@@ -50,6 +58,16 @@ function esVocal(letra) {
     return false;
 }
 
+let estado=false;
+
 function mayúsculasYMinúsculas() {
-    console.log("mayúsculasYMinúsculas");
+    let p4=document.querySelector("#p4");
+    let texto=p4.innerHTML;
+
+    if (estado) texto=texto.toLowerCase();
+    else texto=texto.toUpperCase();
+
+    estado=!estado;
+
+    p4.innerHTML=texto;
 }
