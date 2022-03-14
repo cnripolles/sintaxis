@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Tabla de multiplicar</title>
+        <meta charset="utf-8"/>
+        <script src="./js/tabla.js"></script>
+        <script>
+            function queCutre() {
+                let p=document.querySelector("#ese");
+                let texto=p.innerHTML;
+                let resultado="";
+
+                /*for (let i=0; i< texto.length; i++) {
+                    resultado+=texto.charAt(i) + "-"
+                }*/
+                for (let i=0; i< texto.length; i+=2) {
+                    resultado+=texto.charAt(i);
+                }
+
+                
+
+
+                p.innerHTML=resultado;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Tabla de multiplicar</h1>
+        <p>
+            Por favor, indica qué tabla de multiplciar quieres ver<br/>
+            <input type="text" id="numero" value="7" />
+            <button onclick="dibujarTabla();">Calcular tabla</button>
+            <button onclick="queCutre();">Cosas con párrafos</button>
+        </p>
+        <div id="resultado">La tabla aparecerá aquí</div>
+        <p id="ese">Esto es un párrafo muy mono</p>
+    </body>
+
+</html>
